@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../js/library/jsCalendar/source/jsCalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/resetStyles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.5/source/jsCalendar.min.css" -->
+    <link rel="stylesheet" type="text/css" href="../scss/jsCalendarTheme.css">
+
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.12/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script> -->
+    <title>UP-LMS</title>
+
+</head>
+
+<body class="body">
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <div class="sidebar__group sidebar__logo">
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/start-up.svg" alt="logo">
+                    <span class="sidebar__text">Up-LMS</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__general">
+                <a href="#" class="sidebar__link sidebar__active">
+                    <img src="../assets/Головна.svg" alt="logo">
+                    <span class="sidebar__text">Головна</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__menu">
+                <a href="#" class="sidebar__link sidebar__menu-link">
+                    <img src="../assets/календар.svg" alt="logo">
+                    <span class="sidebar__text">Календар</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/предмети.svg" alt="logo">
+                    <span class="sidebar__text">Предмети</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/дз.svg" alt="logo">
+                    <span class="sidebar__text">Домашні завдання</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/статистика.svg" alt="logo">
+                    <span class="sidebar__text">Статистика</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/чати.svg" alt="logo">
+                    <span class="sidebar__text">Чати</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__selected">
+                <p class="sidebar__title">ОБРАНІ КУРСИ <button class="sidebar__selected-add-course"><img
+                            src="../assets/Plus.svg" alt=""></button></p>
+                <div class="sidebar__selected-courses"></div>
+
+            </div>
+
+            <div class="sidebar__group sidebar__poll">
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/Опитування.svg" alt="logo">
+                    <span class="sidebar__text">Опитування</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__settings">
+                <p class="sidebar__title">НАЛАШТУВАННЯ</p>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/Налаштування.svg" alt="logo">
+                    <span class="sidebar__text">Налаштування сповіщень</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/Налаштування повыдомлень.svg" alt="logo">
+                    <span class="sidebar__text">Налаштуваня повідомлень</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__exit">
+                <a href="#" class="sidebar__link">
+                    <img src="../assets/Вихыд.svg" alt="logo">
+                    <span class="sidebar__text">Вихід</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="content__header header">
+                <form action="" class="header__form header__left">
+                    <label for="search">
+                        <img src="../assets/search.svg" alt="logo">
+                        <input type="text" id="search" placeholder="Пошук">
+                    </label>
+                </form>
+                <div class="header-notification header__right">
+                    <div class="header__right-item header__item-message">
+                        <a href="#" class="header__link">
+                            <img src="../assets/messages.svg" alt="logo">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="header__right-item header__item-notification">
+                        <a href="#" class="header__link">
+                            <img src="../assets/notification.svg" alt="logo">
+                            <span id="notification-green"></span>
+                            <span id="notification-orange"></span>
+                            <span id="notification-pink"></span>
+                        </a>
+                    </div>
+                    <div class="header__right-item header__item-profile">
+                        <a href="#" class="header__link">
+                            <img src="../assets/Profile.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <span class="header__speciality">Спеціальність: 015.39 Професійна освіта Цифрові технології</span>
+            </div>
+
+            <div class="content__inside ">
+                <div class="home inside">
+                    <div class="inside__general inside__general-left">
+
+                        <div class="home__welcome">
+                            <p class="home__welcome-hi">👋 Вітання Роман</p>
+                            <p class="home__welcome-date">12 Квіт 2024, П’ятниця</p>
+                        </div>
+
+                        <div class="home__advertisement advertisement">
+                            <div class="advertisement__content">
+                                <h3 class="advertisement__title">Оголошення!!!</h3>
+                                <p class="advertisement__description">В головному актовому залі 24.05.2025 відбудетсь
+                                    виступ
+                                    гурту “Imagine Dragons”</p>
+                                <a href="#" class="advertisement__link">Детальніше<img src="../assets/arrow-right.svg"
+                                        alt=""></a>
+                            </div>
+                            <div class="advertisement__img">
+                                <img src="../assets/Isolation_Mode.png" alt="" class="advertisement__bg">
+                            </div>
+
+                            <!-- <div id='calendar'></div> -->
+                        </div>
+
+                        <div class="home__lesson-tooday lesson">
+
+                            <div class="block__title">
+                                <p class="block__title-title">
+                                    <img src="../assets/Розклад.svg" alt="icon">
+                                    <span>Розклад на сьогодні</span>
+                                </p>
+                                <a href="#" class="block__title-link">
+                                    <span>Див всі</span>
+                                    <img src="../assets/arrow-left.svg" alt="icon">
+                                </a>
+                            </div>
+
+                            <div class="lesson__cards">
+
+                                <div class="lesson__cards-card robots">
+                                    <a href="#" class="lesson__cards-card-name">Основи робототехніки</ф>
+                                        <a href="#" class="lesson__cards-card-ticher ">
+                                            <img src="../assets/Садовий.png" alt="icon">
+                                            <span>Садовий Микола Ілліч</span>
+                                        </a>
+                                        <a href="#" class="lesson__cards-card-day-of-week ">
+                                            <img src="../assets/calendar-2.svg" alt="icon">
+                                            <span>Понеділок & П’ятниця</span>
+                                        </a>
+                                        <a href="#" class="lesson__cards-card-time ">
+                                            <img src="../assets/clock.svg" alt="icon">
+                                            <span>8:00 - 9:20</span>
+                                        </a>
+                                        <img src="../assets/video.svg" alt="Приєднатись на конференцію"
+                                            class="lesson__cards-card-video">
+                                </div>
+
+                                <div class="lesson__cards-card comp-pract">
+                                    <a href="#" class="lesson__cards-card-name">Комп. Практикум</a>
+                                    <a href="#" class="lesson__cards-card-ticher ">
+                                        <img src="../assets/Соменко.png" alt="icon">
+                                        <span>Соменко Дмитро Вікторович</span>
+                                    </a>
+                                    <a href="#" class="lesson__cards-card-day-of-week ">
+                                        <img src="../assets/calendar-2.svg" alt="icon">
+                                        <span>Понеділок</span>
+                                    </a>
+                                    <a href="#" class="lesson__cards-card-time ">
+                                        <img src="../assets/clock.svg" alt="icon">
+                                        <span>9:30 - 10:50</span>
+                                    </a>
+                                    <img src="../assets/video.svg" alt="Приєднатись на конференцію"
+                                        class="lesson__cards-card-video">
+                                </div>
+
+                                <div class="lesson__cards-card eanglish">
+                                    <a href="#" class="lesson__cards-card-name">Англійська мова за ПС</a>
+                                    <a href="#" class="lesson__cards-card-ticher ">
+                                        <img src="../assets/Капітан.png" alt="icon">
+                                        <span>Капітан Тетяна Анатоліївна</span>
+                                    </a>
+                                    <a href="#" class="lesson__cards-card-day-of-week ">
+                                        <img src="../assets/calendar-2.svg" alt="icon">
+                                        <span>Понеділок & П’ятниця</span>
+                                    </a>
+                                    <a href="#" class="lesson__cards-card-time ">
+                                        <img src="../assets/clock.svg" alt="icon">
+                                        <span>11:00 - 12:20</span>
+                                    </a>
+                                    <img src="../assets/video.svg" alt="Приєднатись на конференцію"
+                                        class="lesson__cards-card-video">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="home__statistic statistic">
+                            <div class="block__title">
+                                <p class="block__title-title">
+                                    <img src="../assets/Статистика_icon.svg" alt="icon">
+                                    <span>Статистика по предметам</span>
+                                </p>
+                                <a href="#" class="block__title-link">
+                                    <span>Див всі</span>
+                                    <img src="../assets/arrow-left.svg" alt="icon">
+                                </a>
+                            </div>
+                            <div class="statistic__chart">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="inside__helper inside__helper-right">
+
+                        <div class="inside__helper-progress-bar">
+                            <p class="inside__helper-progress-bar-text">Семестер <span>4</span> p 6</p>
+                            <span class="inside__helper-progress-bar-progres"><span></span></span>
+                        </div>
+
+                        <div id="calendar">
+                            <div class="calendar-header">
+                                <button id="prevMonth"><img src="../assets/arrow-left-calendar.svg" alt="icon"></button>
+                                <h2 id="monthYear"></h2>
+                                <button id="nextMonth"><img src="../assets/arrow-left-calendar.svg" alt="icon"></button>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="calendar-weekdays">
+                                    <div>Пн</div>
+                                    <div>Вт</div>
+                                    <div>Ср</div>
+                                    <div>Чт</div>
+                                    <div>Пт</div>
+                                    <div class="weekend">Сб</div>
+                                    <div class="weekend">Нд</div>
+                                </div>
+                                <div id="calendarDays" class="calendar-days" </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inside__helper-hws">
+                            <div class="block__title">
+                                <p class="block__title-title">
+                                    <img src="../assets/ДЗ_title.svg" alt="icon">
+                                    <span>ДЗ</span>
+                                </p>
+                                <a href="#" class="block__title-link">
+                                    <span>Див всі</span>
+                                    <img src="../assets/arrow-left.svg" alt="icon">
+                                </a>
+                            </div>
+                            <div class="inside__helper-hws inside__helper-hws-wrapper">
+                                <div class="inside__helper-hws-card">
+                                    <p class="inside__helper-hws-card-title">
+                                        <span>Комп. Практикум</span>
+                                        <span><img src="../assets/Перевіряється.svg"
+                                                alt="Перевіряється">Перевіряється</span>
+                                    </p>
+                                    <p class="inside__helper-hws-card-task">Завдання: <strong> Лабораторна
+                                            робота 7</strong></p>
+                                    <p class="inside__helper-hws-card-date">Дата здачі: Квітень 10, 2024</p>
+                                </div>
+                                <div class="inside__helper-hws-card">
+                                    <p class="inside__helper-hws-card-title">
+                                        <span>Комп. Практикум</span>
+                                        <span><img src="../assets/Перевіряється.svg"
+                                                alt="Перевіряється">Перевіряється</span>
+                                    </p>
+                                    <p class="inside__helper-hws-card-task">Завдання: <strong> Лабораторна робота
+                                            7</strong></p>
+                                    <p class="inside__helper-hws-card-date">Дата здачі: Квітень 10, 2024</p>
+                                </div>
+                                <div class="inside__helper-hws-card">
+                                    <p class="inside__helper-hws-card-title">
+                                        <span>Комп. Практикум</span>
+                                        <span><img src="../assets/Перевіряється.svg"
+                                                alt="Перевіряється">Перевіряється</span>
+                                    </p>
+                                    <p class="inside__helper-hws-card-task">Завдання: <strong>Лабораторна робота
+                                            7</strong></p>
+                                    <p class="inside__helper-hws-card-date">Дата здачі: Квітень 10, 2024</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="../js/library/jsCalendar/source/jsCalendar.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="../js/library/statistick.js"></script>
+        <script type="text/javascript" src="../js/library/jsCalendar/source/jsCalendar.lang.uk.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.5/source/jsCalendar.min.js"
+        integrity="sha384-F3Wc9EgweCL3C58eDn9902kdEH6bTDL9iW2JgwQxJYUIeudwhm4Wu9JhTkKJUtIJ"
+        crossorigin="anonymous"></script> -->
+        <script src="../js/customCalendar.js"></script>
+        <script>
+
+        </script>
+</body>
+
+</html>
