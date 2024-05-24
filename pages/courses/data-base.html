@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../js/library/jsCalendar/source/jsCalendar.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/resetStyles.css">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-jscalendar@1.4.5/source/jsCalendar.min.css" -->
+    <link rel="stylesheet" type="text/css" href="../../scss/jsCalendarTheme.css">
+
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.12/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+
+    </script> -->
+    <title>UP-LMS</title>
+
+</head>
+
+<body class="body">
+    <div class="wrapper">
+
+        <div class="sidebar">
+            <div class="sidebar__group sidebar__logo">
+                <a href="../home.html" class="sidebar__link">
+                    <img src="../../assets/start-up.svg" alt="logo">
+                    <span class="sidebar__text">Up-LMS</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__general">
+                <a href="../home.html" class="sidebar__link">
+                    <img src="../../assets/Головна.svg" alt="logo">
+                    <span class="sidebar__text">Головна</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__menu">
+                <a href="#" class="sidebar__link sidebar__menu-link">
+                    <img src="../../assets/календар.svg" alt="logo">
+                    <span class="sidebar__text">Календар</span>
+                </a>
+                <a href="#" class="sidebar__link sidebar__active">
+                    <img src="../../assets/предмети.svg" alt="logo">
+                    <span class="sidebar__text">Предмети</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/дз.svg" alt="logo">
+                    <span class="sidebar__text">Домашні завдання</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/статистика.svg" alt="logo">
+                    <span class="sidebar__text">Статистика</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/чати.svg" alt="logo">
+                    <span class="sidebar__text">Чати</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__selected">
+                <p class="sidebar__title">ОБРАНІ КУРСИ <button class="sidebar__selected-add-course"><img
+                            src="../../assets/Plus.svg" alt=""></button></p>
+                <div class="sidebar__selected-courses"></div>
+
+            </div>
+
+            <div class="sidebar__group sidebar__poll">
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/Опитування.svg" alt="logo">
+                    <span class="sidebar__text">Опитування</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__settings">
+                <p class="sidebar__title">НАЛАШТУВАННЯ</p>
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/Налаштування.svg" alt="logo">
+                    <span class="sidebar__text">Налаштування сповіщень</span>
+                </a>
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/Налаштування повыдомлень.svg" alt="logo">
+                    <span class="sidebar__text">Налаштуваня повідомлень</span>
+                </a>
+            </div>
+
+            <div class="sidebar__group sidebar__exit">
+                <a href="#" class="sidebar__link">
+                    <img src="../../assets/Вихыд.svg" alt="logo">
+                    <span class="sidebar__text">Вихід</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="content__header header">
+
+                <form action="" class="header__form header__left">
+                    <label for="search">
+                        <img src="../../assets/search.svg" alt="logo">
+                        <input type="text" id="search" placeholder="Пошук">
+                    </label>
+                </form>
+                <div class="header-notification header__right">
+                    <div class="header__right-item header__item-message">
+                        <a href="#" class="header__link">
+                            <img src="../../assets/messages.svg" alt="logo">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="header__right-item header__item-notification">
+                        <a href="#" class="header__link">
+                            <img src="../../assets/notification.svg" alt="logo">
+                            <span id="notification-green"></span>
+                            <span id="notification-orange"></span>
+                            <span id="notification-pink"></span>
+                        </a>
+                    </div>
+                    <div class="header__right-item header__item-profile">
+                        <a href="#" class="header__link">
+                            <img src="../../assets/Profile.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <span class="header__speciality">Спеціальність: 015.39 Професійна освіта Цифрові технології</span>
+                <p class="header__date">
+                    <span>10 Квітня</span>
+                    <span>2024</span>
+                    <span>П'ятниця</span>
+                </p>
+            </div>
+
+            <div class="content__course ">
+                <div class="content__course-title">
+                    <a href="../home.html">Предмети</a> -> <a href="#">Бази Данних</a>
+                </div>
+                <div class="content__course-grid">
+
+                    <div class="content__course-grid-row-1 row-1">
+                        <div class="row-1-description">
+                            <div class="row-1-description-title">Бази даних</div>
+                            <div class="row-1-description-description">
+                                На заняттях з баз даних ми досліджуємо фундаментальні концепції, які стоять за
+                                створенням, управлінням та використанням баз даних. Ми детально розглядаємо структуру
+                                баз даних, вивчаємо мову запитів SQL та навчаємося оптимізувати запити для ефективної
+                                роботи з даними. Я впевнений, що кожен з вас зможе зрозуміти і застосувати ці принципи в
+                                практичних завданнях. Наші практичні заняття допоможуть вам побудувати бази даних,
+                                вирішити складні завдання та аналізувати інформацію для прийняття обґрунтованих рішень.
+                            </div>
+                        </div>
+                        <div class="row-1-ticher">
+                            <img src="../../assets/Соменко-курс.png" alt="Соменко-курс">
+                            <p>Соменко Дмитро Вікторович</p>
+                        </div>
+                    </div>
+
+                    <div class="content__course-grid-row-2 row-2">
+                        <div class="block__title">
+                            <p class="block__title-title">
+                                <img src="../../assets/Статистика_icon.svg" alt="icon">
+                                <span>Оголошення</span>
+                            </p>
+                            <a href="#" class="block__title-link">
+                                <span>Див всі</span>
+                                <img src="../../assets/arrow-left.svg" alt="icon">
+                            </a>
+                        </div>
+
+                        <div class="row-2-advertisement">
+                            <p class="row-2-advertisement-title">Оголошення 1 на довільну тему</p>
+                            <p class="row-2-advertisement-descr">
+                                На заняттях з баз даних ми досліджуємо фундаментальні
+                                концепції, які стоять за створенням, управлінням та використанням баз даних. Ми детально
+                                розглядаємо структуру баз даних, вивчаємо мову запитів SQL та навчаємося оптимізувати
+                                запити для ефективної роботи з даними. Я впевнений, що кожен з вас зможе зрозуміти і
+                                застосувати ці принципи в практичних завданнях.
+                            </p>
+                            <span class="row-2-advertisement-date">15.04.2024</span>
+                        </div>
+                        <div class="row-2-advertisement">
+                            <p class="row-2-advertisement-title">Оголошення 1</p>
+                            <p class="row-2-advertisement-descr">
+                                На заняттях з баз даних ми досліджуємо фундаментальні
+                                концепції, які стоять за створенням, управлінням та використанням баз даних. Ми детально
+                                розглядаємо структуру баз даних, вивчаємо мову запитів SQL та навчаємося оптимізувати
+                                запити для ефективної роботи з даними. Я впевнений, що кожен з вас зможе зрозуміти і
+                                застосувати ці принципи в практичних завданнях.
+                            </p>
+                            <span class="row-2-advertisement-date">15.04.2024</span>
+                        </div>
+                        <div class="row-2-advertisement">
+                            <p class="row-2-advertisement-title">Оголошення 1</p>
+                            <p class="row-2-advertisement-descr">
+                                На заняттях з баз даних ми досліджуємо фундаментальні
+                                концепції, які стоять за створенням, управлінням та використанням баз даних. Ми детально
+                                розглядаємо структуру баз даних, вивчаємо мову запитів SQL та навчаємося оптимізувати
+                                запити для ефективної роботи з даними. Я впевнений, що кожен з вас зможе зрозуміти і
+                                застосувати ці принципи в практичних завданнях.
+                            </p>
+                            <span class="row-2-advertisement-date">15.04.2024</span>
+                        </div>
+                    </div>
+
+                    <div class="content__course-grid-row-3 row-3">
+                        <div class="block__title">
+                            <p class="block__title-title">
+                                <img src="../../assets/Статистика_icon.svg" alt="icon">
+                                <span>Статистика на потоці</span>
+                            </p>
+                        </div>
+                        <div class="block__title">
+                            <p class="block__title-title">
+                                <img src="../../assets/Статистика_icon.svg" alt="icon">
+                                <span>ДЗ</span>
+                            </p>
+                            <a href="#" class="block__title-link">
+                                <span>Див всі</span>
+                                <img src="../../assets/arrow-left.svg" alt="icon">
+                            </a>
+                        </div>
+                        <div class="row-3-statistic">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                        <div class="row-3-home-work">
+                            <div class="row-3-home-work-indycator">
+                                <a href="#" class="row-3-home-work-indycator-all">Див всі</a>
+                                <a href="#" class="row-3-home-work-indycator-expired indycator"
+                                    title="Протерміновані завдання">5</a>
+                                <a href="#" class="row-3-home-work-indycator-almost indycator"
+                                    title="Завдання, термін яких підходить до здачі">1</a>
+                                <a href="#" class="row-3-home-work-indycator-done indycator"
+                                    title="Здані й оцінені завдання">8</a>
+                            </div>
+                            <div class="row-3-home-work-actualy">
+                                <p class="row-3-home-work-actualy-number">
+                                    Лабораторна робота №15
+                                </p>
+                                <p class="row-3-home-work-actualy-theme">
+                                    Тут тема лабораторної роботи
+                                </p>
+                                <a href="#" class="row-3-home-work-actualy-link">
+                                    Виконати
+                                    <img src="../../assets/Виконати.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content__course-grid-row-4 row-4">
+                        <div class="block__title">
+                            <p class="block__title-title">
+                                <img src="../../assets/Статистика_icon.svg" alt="icon">
+                                <span>Матеріали до екзамену</span>
+                            </p>
+                        </div>
+                        <div class="row-4-exams">
+                            <div class="row-4-exams-descr">
+                                <p class="row-4-exams-descr-title">Основна інформація</p>
+                                <p class="row-4-exams-descr-description">
+                                    На заняттях з баз даних ми досліджуємо
+                                    фундаментальні концепції, які стоять за створенням, управлінням та використанням баз
+                                    даних. Ми детально розглядаємо структуру баз даних, вивчаємо мову запитів SQL та
+                                    навчаємося оптимізувати запити для ефективної роботи з даними. Я впевнений, що кожен
+                                    з вас зможе зрозуміти і застосувати ці принципи в практичних завданнях.
+                                </p>
+                            </div>
+                            <div class="row-4-exams-file">
+                                <p class="row-4-exams-file-title">Матеріали</p>
+                                <div class="row-4-exams-file-files">
+                                    <figure>
+                                        <img src="../../assets/File_blue.svg" alt="Elephant at sunset" />
+                                        <figcaption>Білети.dox</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="../../assets/File_red.svg" alt="Elephant at sunset" />
+                                        <figcaption>Додаткові ....pdf</figcaption>
+                                    </figure>
+                                    <figure>
+                                        <img src="../../assets/File_blue.svg" alt="Elephant at sunset" />
+                                        <figcaption>Аркуш відп ....dox</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="../../js/library/statistickCourse.js"></script>
+</body>
+
+</html>
